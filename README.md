@@ -1,6 +1,6 @@
 # lslinks
 
-A command line tool to list links.
+A command line tool to list links. ls-like.
 
 ## Installation
 
