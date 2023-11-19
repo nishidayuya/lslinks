@@ -1,5 +1,3 @@
-require "lslinks"
-
 module Lslinks::Reader::Stdin
   class << self
     def open(resource_name, stdin: $stdin, **, &block)

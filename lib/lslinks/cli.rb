@@ -1,5 +1,3 @@
-require "lslinks"
-
 module Lslinks::Cli
   class << self
     def run(argv)

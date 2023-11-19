@@ -1,5 +1,3 @@
-require "lslinks"
-
 module Lslinks::Parser
   class << self
     def each_link(resource_stream, **)

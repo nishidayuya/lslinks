@@ -1,5 +1,3 @@
-require "lslinks"
-
 module Lslinks::Formatter
   class << self
     def output(resource_name, link, stdout: $stdout, **options)

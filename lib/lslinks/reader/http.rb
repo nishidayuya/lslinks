@@ -1,5 +1,3 @@
-require "lslinks"
-
 module Lslinks::Reader::Http
   class << self
     DEFAULT_HTTP_HEADERS = {

@@ -1,5 +1,3 @@
-require "lslinks"
-
 class Lslinks::OptionParser < OptionParser
   class << self
     def call(argv)

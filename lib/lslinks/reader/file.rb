@@ -1,5 +1,3 @@
-require "lslinks"
-
 module Lslinks::Reader::File
   class << self
     def open(resource_name, **, &block)
