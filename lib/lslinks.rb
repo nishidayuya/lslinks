@@ -15,7 +15,7 @@ module Lslinks
   end
 end
 
-Pathname(__dir__).glob("**/*.rb").map { |path|
+(Pathname(__dir__).glob("**/*.rb") - [Pathname(__FILE__)]).map { |path|
   path.sub_ext("")
 }.sort.each do |path|
   require(path.relative_path_from(__dir__))
