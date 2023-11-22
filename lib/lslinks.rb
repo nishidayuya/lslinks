@@ -6,8 +6,6 @@ require "uri"
 require "nokogiri"
 
 module Lslinks
-  VERSION = "0.1.1"
-
   class << self
     def debug?
       return "1" == ENV["LSLINKS_DEBUG"]
