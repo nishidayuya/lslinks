@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift(File.join(__dir__, "lib"))
-require "lslinks"
+require_relative "lib/lslinks/version"
 
 Gem::Specification.new do |spec|
   spec.name = "lslinks"
