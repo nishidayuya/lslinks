@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "A command line tool to list links."
   spec.homepage = "https://github.com/nishidayuya/lslinks"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 3.2.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
