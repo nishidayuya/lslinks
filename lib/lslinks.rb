@@ -13,6 +13,7 @@ module Lslinks
   end
 end
 
+require "lslinks/version"
 (Pathname(__dir__).glob("**/*.rb") - [Pathname(__FILE__)]).map { |path|
   path.sub_ext("")
 }.sort.each do |path|
