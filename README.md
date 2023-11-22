@@ -1,5 +1,9 @@
 # lslinks
 
+[![License X11](https://img.shields.io/badge/license-X11-blue.svg)](https://raw.githubusercontent.com/nishidayuya/lslinks/master/LICENSE.txt)
+[![Gem Version](https://badge.fury.io/rb/lslinks.svg)](https://rubygems.org/gems/lslinks)
+[![Build Status](https://github.com/nishidayuya/lslinks/workflows/test/badge.svg)](https://github.com/nishidayuya/lslinks/actions?query=workflow%3Atest)
+
 A command line tool to list links. ls-like.
 
 ## Installation
