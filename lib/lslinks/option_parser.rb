@@ -12,11 +12,12 @@ class Lslinks::OptionParser < OptionParser
       parser.separator("HTTP input options:")
       parser.on("--user-agent=USER_AGENT") # from curl wget
       parser.on("--referer=REFERER") # from curl wget
-      parser.on("--header=HEADER") # from curl wget
+      parser.on("-H", "--header=HEADER") # from curl wget
+      parser.on("--compressed", "ignore. no effect.") # from curl
       options = {
         http_headers: {},
       }
-      rest_args = parser.order(argv, into: options)
+      rest_args = parser.permute(argv, into: options)
       resource_name = rest_args.shift
       if !resource_name
         $stderr.puts(parser.help)

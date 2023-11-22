@@ -44,5 +44,29 @@ class Lslinks::OptionParserTest < Lslinks::TestCase
       assert_equal(expected_options, actual_options)
       assert_equal(resource_name, actual_resource_name)
     end
+
+    test("parse cURL command line options from Google Chrome Developer Tools") do
+      resource_name = "https://dummy.example.org/path"
+      argv = [
+        resource_name,
+        "-H",
+        "Custom-Header-Key1: custom header value1",
+        "-H",
+        "Custom-Header-Key2: custom header value2",
+        "--compressed",
+      ]
+      actual_options, actual_resource_name = *Lslinks::OptionParser.(argv)
+      assert_equal(
+        {
+          compressed: true,
+          http_headers: {
+            "Custom-Header-Key1" => "custom header value1",
+            "Custom-Header-Key2" => "custom header value2",
+          },
+        },
+        actual_options,
+      )
+      assert_equal(resource_name, actual_resource_name)
+    end
   end
 end
