@@ -6,8 +6,8 @@ class Lslinks::OptionParser < OptionParser
       parser.version = Lslinks::VERSION
       parser.separator("")
       parser.separator("Basic options:")
-      parser.on("-l", "list links with text")
-      parser.on("-k", "--convert-links", "convert links to full URL")
+      parser.on("-l", "list links with text") # from ls
+      parser.on("-k", "--convert-links", "convert links to full URL") # from wget
       parser.separator("")
       parser.separator("HTTP input options:")
       parser.on("--user-agent=USER_AGENT") # from curl wget
