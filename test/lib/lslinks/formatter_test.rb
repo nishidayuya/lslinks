@@ -26,7 +26,7 @@ class Lslinks::FormatterTest < Lslinks::TestCase
       "sub-resources" => "sub/resources",
       "going back in the directory tree" => "../back.html",
     )
-    test("output link url and text if list_mode is true") do |url|
+    test("output link url and text if :list_mode is true") do |url|
       stdout = StringIO.new
       Lslinks::Formatter.output(
         "https://example.org/base/url",
@@ -59,7 +59,7 @@ class Lslinks::FormatterTest < Lslinks::TestCase
         "https://example.org/back.html",
       ],
     )
-    test("output full link url if convert_links is true") do |test_pattern|
+    test("output full link url if :convert_links is true") do |test_pattern|
       url, converted_url = *test_pattern
       stdout = StringIO.new
       Lslinks::Formatter.output(
