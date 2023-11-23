@@ -70,5 +70,17 @@ class Lslinks::FormatterTest < Lslinks::TestCase
       )
       assert_equal("#{converted_url}\n", stdout.string)
     end
+
+    test("output full link from :base if :convert_links is true") do
+      stdout = StringIO.new
+      Lslinks::Formatter.output(
+        "-", # stdin
+        Lslinks::Link.new(url: "sub/resources", text: "link text"),
+        stdout:,
+        convert_links: true,
+        base: "https://example.org/base/url",
+      )
+      assert_equal("https://example.org/base/sub/resources\n", stdout.string)
+    end
   end
 end
