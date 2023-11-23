@@ -2,7 +2,7 @@ module Lslinks::Formatter
   class << self
     def output(resource_name, link, stdout: $stdout, **options)
       link_uri = if options[:convert_links]
-                   URI(resource_name) + link.url
+                   URI(options[:base] || resource_name) + link.url
                  else
                    link.uri
                  end
