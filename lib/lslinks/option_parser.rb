@@ -6,13 +6,13 @@ class Lslinks::OptionParser < OptionParser
       parser.version = Lslinks::VERSION
       parser.separator("")
       parser.separator("Basic options:")
-      parser.on("-l", "list links with text") # from ls
-      parser.on("-k", "--convert-links", "convert links to full URL") # from wget
+      parser.on("-l", "list links with text.") # from ls
+      parser.on("-k", "--convert-links", "convert links to full URL.") # from wget
       parser.separator("")
       parser.separator("HTTP input options:")
-      parser.on("--user-agent=USER_AGENT") # from curl wget
-      parser.on("--referer=REFERER") # from curl wget
-      parser.on("-H", "--header=HEADER") # from curl wget
+      parser.on("--user-agent=USER-AGENT", "specify User-Agent header. same as '--user-agent=USER-AGENT'.") # from curl wget
+      parser.on("--referer=REFERER", "specify Referer header. same as '--referer=REFERER'.") # from curl wget
+      parser.on("-H", "--header=HEADER-LINE", "specify various headers in HTTP request. e.g.: --header='Accept-Language: ja'") # from curl wget
       parser.on("--compressed", "ignore. no effect.") # from curl
       options = {
         http_headers: {},
