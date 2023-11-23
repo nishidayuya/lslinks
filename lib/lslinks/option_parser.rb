@@ -2,9 +2,12 @@ class Lslinks::OptionParser < OptionParser
   class << self
     def call(argv)
       parser = new
-      parser.banner = "Usage: #{File.basename(Process.argv0)} [OPTIONS] URI_or_path"
+      parser.banner = "Usage: #{File.basename(Process.argv0)} [OPTIONS] [--] RESOURCE-NAME"
       parser.version = Lslinks::VERSION
       parser.separator("")
+      parser.separator("RESOURCE-NAME are URL, local file path or stdin(-).")
+      parser.separator("")
+      parser.separator("OPTIONS:")
       parser.on("-l", "list links with text.") # from ls
       parser.on("-k", "--convert-links", "convert links to full URL.") # from wget
       parser.on("--user-agent=USER-AGENT", "specify User-Agent header. same as '--user-agent=USER-AGENT'.") # from curl wget
