@@ -2,6 +2,14 @@ require "test_helper"
 
 class Lslinks::OptionParserTest < Lslinks::TestCase
   sub_test_case(".call") do
+    test("use stdin if no resource_name") do
+      assert_nothing_raised do
+        actual_options, actual_resource_name = *Lslinks::OptionParser.([])
+        assert_equal({http_headers: {}}, actual_options)
+        assert_equal("-", actual_resource_name)
+      end
+    end
+
     data(
       "non special case" => [
         %w[-k],
