@@ -3,7 +3,6 @@ name: dockerimage
 on:
   push:
     branches:
-      - ci_dockerimage # TODO: remove
       - master
     tags:
       - "v*"
