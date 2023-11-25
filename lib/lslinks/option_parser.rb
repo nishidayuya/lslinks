@@ -20,10 +20,7 @@ class Lslinks::OptionParser < OptionParser
       }
       rest_args = parser.permute(argv, into: options)
       resource_name = rest_args.shift
-      if !resource_name
-        $stderr.puts(parser.help)
-        exit(1)
-      end
+      resource_name = "-" if !resource_name
       return options, resource_name
     end
   end
