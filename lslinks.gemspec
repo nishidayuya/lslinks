@@ -7,6 +7,7 @@ Gem::Specification.new do |spec|
   spec.version = Lslinks::VERSION
   spec.authors = ["Yuya.Nishida."]
 
+  spec.licenses = %w[X11]
   spec.summary = "A command line tool to list links."
   spec.homepage = "https://github.com/nishidayuya/lslinks"
   spec.required_ruby_version = ">= 3.2.0"
